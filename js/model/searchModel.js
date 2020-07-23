@@ -9,7 +9,7 @@ export class ApiData{
    } 
     getApiData(callback){
         let http=new XMLHttpRequest();
-        http.open('get' , ` /search?&q=${this.query}`);
+        http.open('get' , ` https://forkify-api.herokuapp.com/api/search?&q=${this.query}`);
         http.send();
         http.addEventListener("readystatechange",function () {
             if(http.status==200&&http.readyState==4){
